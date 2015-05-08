@@ -18,6 +18,10 @@ namespace DemoEF
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.HasDefaultSchema("store");
+
+            modelBuilder.Entity<Category>().Property(p => p.Code).IsRequired();
+            modelBuilder.Entity<Category>().HasMany(c => c.Products).WithRequired(p => p.Category);
 
             base.OnModelCreating(modelBuilder);
         }

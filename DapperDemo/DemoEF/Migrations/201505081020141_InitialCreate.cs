@@ -8,17 +8,18 @@ namespace DemoEF.Migrations
         public override void Up()
         {
             CreateTable(
-                "dbo.Category",
+                "store.Category",
                 c => new
                     {
                         Id = c.Guid(nullable: false),
+                        Code = c.String(nullable: false),
                         Name = c.String(),
                         Description = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.Product",
+                "store.Product",
                 c => new
                     {
                         Id = c.Guid(nullable: false),
@@ -29,17 +30,27 @@ namespace DemoEF.Migrations
                         Category_Id = c.Guid(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Category", t => t.Category_Id)
+                .ForeignKey("store.Category", t => t.Category_Id)
                 .Index(t => t.Category_Id);
+            
+            CreateTable(
+                "store.Tag",
+                c => new
+                    {
+                        Id = c.Guid(nullable: false),
+                        Name = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Product", "Category_Id", "dbo.Category");
-            DropIndex("dbo.Product", new[] { "Category_Id" });
-            DropTable("dbo.Product");
-            DropTable("dbo.Category");
+            DropForeignKey("store.Product", "Category_Id", "store.Category");
+            DropIndex("store.Product", new[] { "Category_Id" });
+            DropTable("store.Tag");
+            DropTable("store.Product");
+            DropTable("store.Category");
         }
     }
 }

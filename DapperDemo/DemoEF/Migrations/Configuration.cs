@@ -18,13 +18,15 @@ namespace DemoEF.Migrations
 
             var clothers = new Category()
             {
+                Code = "clothers",
                 Name = "Clothers",
                 Description = "Men Clothers"
             };
 
             var food = new Category()
             {
-                Name = "Food",
+                Code = "foods",
+                Name = "Foods",
                 Description = "All foods"
             };
 

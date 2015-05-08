@@ -46,13 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201505080253226_InitialCreate.cs" />
-    <Compile Include="Migrations\201505080253226_InitialCreate.Designer.cs">
-      <DependentUpon>201505080253226_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201505081020141_InitialCreate.cs" />
+    <Compile Include="Migrations\201505081020141_InitialCreate.Designer.cs">
+      <DependentUpon>201505081020141_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201505080605446_AddTag.cs" />
-    <Compile Include="Migrations\201505080605446_AddTag.Designer.cs">
-      <DependentUpon>201505080605446_AddTag.cs</DependentUpon>
+    <Compile Include="Migrations\201505081131571_UpdateMapping.cs" />
+    <Compile Include="Migrations\201505081131571_UpdateMapping.Designer.cs">
+      <DependentUpon>201505081131571_UpdateMapping.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,11 +69,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201505080253226_InitialCreate.resx">
-      <DependentUpon>201505080253226_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201505081020141_InitialCreate.resx">
+      <DependentUpon>201505081020141_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201505080605446_AddTag.resx">
-      <DependentUpon>201505080605446_AddTag.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201505081131571_UpdateMapping.resx">
+      <DependentUpon>201505081131571_UpdateMapping.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
