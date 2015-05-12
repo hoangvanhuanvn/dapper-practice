@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="StoreConnectionAccessor.cs" />
     <Compile Include="Migrations\201505081020141_InitialCreate.cs" />
     <Compile Include="Migrations\201505081020141_InitialCreate.Designer.cs">
       <DependentUpon>201505081020141_InitialCreate.cs</DependentUpon>
